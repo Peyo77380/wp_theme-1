@@ -228,7 +228,7 @@ class WP_Widget_Articles_Showcase extends WP_Widget {
        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : false;
        $show_author = isset( $instance['show_author'] ) ? (bool) $instance['show_author'] : false;
 
-       var_dump($instance); 
+       
        ?>
        <p>
            <label 

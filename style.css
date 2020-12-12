@@ -490,6 +490,7 @@ adress h2 {
 .featured_articles .latest_post {
   width: 70%;
   height: 100%;
+  z-index: 100;
   
 }
 
@@ -500,6 +501,7 @@ adress h2 {
   flex-direction: row;
   margin: 0;
   padding: 0;
+  z-index: 50;
 
 }
 

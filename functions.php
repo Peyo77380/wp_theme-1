@@ -74,3 +74,16 @@ function set_excerpt_length () {
 
 add_filter( 'excerpt_length', 'set_excerpt_length');
 
+function wpb_hook_javascript_footer() {
+    if (is_active_sidebar( 'article_showcase' )) :
+    ?>
+        <script 
+            type="text/javascript" 
+            src="<?php echo get_template_directory_uri() ?>/widgets/widget-articles-showcase.js">
+        </script>
+    <?php
+    endif;
+}
+add_action('wp_footer', 'wpb_hook_javascript_footer');
+
+?>
