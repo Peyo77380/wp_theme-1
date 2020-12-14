@@ -315,6 +315,16 @@ footer p {
   }
   
 
+  .post-template-default .wrapper section{
+    width: 100%;
+  }
+
+  .post-template-default .wrapper section article img{
+    max-width: 30%;
+    height: auto;
+    margin: 1rem;
+    float: left;
+  }
   
 }
 
@@ -635,5 +645,68 @@ footer p {
     position: absolute;
     bottom: -11rem;
     transition: all 0.5s ease-in-out;
+  }
+}
+
+
+
+/* style contact */
+
+
+.page-template-default article {
+  width: 100%;
+}
+
+.wpcf7-form p {
+  margin: 1.5rem autp;
+  padding: 0;
+}
+.wpcf7-form textarea,
+.wpcf7-form input {
+  width: 100%;
+  padding: 10px;
+  display: block;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  background-image: none;
+  text-shadow: none;
+  color: #444;
+  font-size: 1rem;
+  line-height: normal;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.wpcf7-form textarea:focus, .wpcf7-form textarea:active, .wpcf7-form input:focus, .wpcf7-form input:active {
+  border-bottom: 2px solid var(--main-contrast);
+  
+}
+
+.wpcf7-form input[type="submit"] {
+  background-color: var(--main-contrast);
+  color: var(--main-highlight);
+  font-weight: bold;
+}
+
+
+.page-template-page-mentions section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.page-template-page-mentions section .box {
+  width: 100%;
+  margin: 2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem
+}
+
+@media screen and (min-width: 960px) {
+  .page-template-page-mentions section .box {
+    width : 40%;
+    margin: 2rem auto;
   }
 }

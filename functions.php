@@ -10,7 +10,6 @@ function larrabesk_setup() {
         'gallerie',
         'blogpost',
         'page',
-        'accueil',
     ));
     
     // featured images supports

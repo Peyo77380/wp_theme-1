@@ -33,18 +33,24 @@
                 <article>
             <?php else : ?>
                 <article class="card">
+                    <?php if (has_post_thumbnail()) : ?>
+                        
+                        <?php the_post_thumbnail( 'small' ); ?>
+                        
+                    <?php endif; ?>
             <?php endif; ?>
 
             
-                <?php if (has_post_thumbnail()) : ?>
-                    
-                    <?php the_post_thumbnail( 'small' ); ?>
-                    
-                <?php endif; ?>
+           
             
         
             <?php if(is_single() || is_page()) : ?>
                 <h2><?php the_title() ?></h2>
+                <?php if (has_post_thumbnail()) : ?>
+                        
+                        <?php the_post_thumbnail( 'small' ); ?>
+                        
+                    <?php endif; ?>
             <?php else: ?>
                 <div>
                     <a href="<?php the_permalink( ) ?>">

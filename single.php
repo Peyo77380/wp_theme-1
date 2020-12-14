@@ -1,9 +1,17 @@
 <?php get_header(); ?>
 
-<section>
-    <?php get_template_part( 'content' ); ?>
+<div class="wrapper">
+    <section>
+        <?php get_template_part( 'content' ); ?>
+    </section>
 
+    <aside>
+    <?php if (is_active_sidebar( 'sidebar' )) : ?>
 
-</section>
+        <?php dynamic_sidebar( 'sidebar' ); ?>
+
+    <?php endif; ?>
+    </aside>
+</div>
 
 <?php get_footer(); ?>
