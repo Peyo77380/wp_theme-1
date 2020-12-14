@@ -9,7 +9,8 @@ function larrabesk_setup() {
     add_theme_support( 'post-formats' , array (
         'gallerie',
         'blogpost',
-        'page'
+        'page',
+        'accueil',
     ));
     
     // featured images supports

@@ -3,13 +3,12 @@
 // TODO 
 
 ?>
-<!--
 
-    
-    <div class="banner">
-    <h1>L'hébergement à prix libre</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod doloremque quis, libero. Ipsum, ut est.</p>
 
+
+
+
+<div class="banner" style="background-image: url('<?php echo get_template_directory_uri(  ) ?>/img/bg-sample-picture.jpg')">
+    <h2>Bienvenue sur <?php ucfirst(bloginfo( 'name' )) ?></h2>
 </div>
 
--->

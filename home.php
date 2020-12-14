@@ -1,15 +1,12 @@
 <?php get_header(); ?>
 
 
-<?php if (is_active_sidebar( "article_showcase" )) :?>
-    <div class="wrapper">
-        <?php dynamic_sidebar( "article_showcase" ); ?>
-    </div>
-<?php endif; ?>
 <div class="wrapper">
-    <section>
+
+    <section class="blogSection">
     
         <?php get_template_part( 'content' ); ?>
+
     </section>
 
     <aside>
