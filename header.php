@@ -14,11 +14,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"> 
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet"> 
   <?php wp_head() ?>
 
 </head>
 
-<body <?php body_class() ?>
+<body <?php body_class() ?>>
   <header>
     <div class="bar">
       <a id="activeIcon" href="<?php echo get_home_url() ?>">
@@ -46,10 +58,10 @@
         'theme_location'       => ''
       ]) ?>
     </div>
-    <?php if (is_front_page(  )) : ?>
-      <?php get_template_part('banner') ?>
-  <?php endif; ?>
   </header>
+  <?php if(is_front_page()||is_page('relaxation')||is_page('meditation')) : ?>
+    <?php get_template_part('banner') ?>
+  <?php endif; ?>
 
   <main>
     <form action="<?php site_url() ?>" method="get">

@@ -7,9 +7,9 @@
 */
 
 :root {
-  --main-contrast: #6E54F8;
-  --main-shadow: #0a003b;
-  --main-color: #6E54F8;
+  --main-contrast: #1a426d;
+  --main-color: #1d4860;
+  --main-lighter: #6b789e;
   --main-highlight: #f1ecf3;
   --main-dark: #202020;
 }
@@ -19,7 +19,7 @@
 }
 
 h1, h2, h3, header, nav, footer ul, .productName, .button, .product .priceTag {
-  font-family: 'Lobster', sans-serif;
+  font-family: 'Sacramento', sans-serif;
 }
 
 body {
@@ -70,7 +70,7 @@ header {
 }
 
 .bar>a:hover{
-	color: var(--main-contrast);
+	color: var(--main-lighter);
 }
 
 
@@ -86,7 +86,7 @@ li {
 
 .menu-item a {
   text-decoration: none;
-  color: var(--main-contrast);
+  color: var(--main-color);
   font-weight: bold;
   box-sizing: border-box;ter;
   align-items: center;
@@ -100,33 +100,66 @@ footer ul {
   width: 100%;
 }
 footer .menu-item a {
-  color: var(--main-highlight);
+  color: var(--main-contrast);
   font-size: 1em;
 
 }
 
-.menu-item:hover a, .current-menu-item a, footer .current-menu-item a, footer .current-menu-item a {
-  color: var(--main-shadow);
+.menu-item:hover a, .current-menu-item a {
+  color: var(--main-lighter);
 }
 
+.current-menu-item a {
+  color: var(--main-contrast);
+}
 
-
-
-.banner {
-  
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  padding: 10%;
-  line-height: 2;
-  font-size: 100%;
+footer .current-menu-item a{
   color: var(--main-highlight);
 }
+
+.banner {
+  height: 20rem;
+  padding: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--main-color);
+  position: relative;
+}
+
+.banner .bgblur{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 5rem;
+
+  background: rgba(255,255,255,0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 5rem;
+  }
+
 
 header h1 {
 	text-transform: capitalize;
   font-size: 2.5em;
-  color: var(--main-shadow);
+  color: var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+header h1:hover {
+
+  color: var(--main-lighter);
 }
 
 header p, header .menu a {
@@ -667,7 +700,7 @@ footer p {
   padding: 10px;
   display: block;
   border: 1px solid #ddd;
-  background-color: #f4f4f4;
+  background-color: var(--main-highlight);
   background-image: none;
   text-shadow: none;
   color: #444;
