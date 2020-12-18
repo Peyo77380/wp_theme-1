@@ -39,7 +39,7 @@
                         
                     <?php endif; ?>
             <?php endif; ?>
-
+            
             
            
             
@@ -68,16 +68,7 @@
         </article>
 
 
-
-        <?php if (is_page( ) || is_single( )) : ?>
-
-            <?php if (have_comments( the_post() )) : ?>
-                <?php while (have_comments( )) : ?>
-                    <?php the_comment(  )?>
-                <?php endwhile; ?>
-            <?php endif; ?>
-
-        <?php endif; ?>
+        
         
 
       

@@ -18,8 +18,13 @@
   box-sizing: border-box;
 }
 
-h1, h2, h3, header, nav, footer ul, .productName, .button, .product .priceTag {
-  font-family: 'Sacramento', sans-serif;
+h1, h2, h3, header, header nav, .productName, .button, .product .priceTag {
+  font-family: 'Parisienne', sans-serif;
+  
+}
+
+header nav, h2 {
+  font-size: 200%;
 }
 
 body {
@@ -96,11 +101,12 @@ li {
 }
 
 footer ul {
+
   flex-wrap: wrap;
   width: 100%;
 }
 footer .menu-item a {
-  color: var(--main-contrast);
+  color: var(--main-highlight);
   font-size: 1em;
 
 }
@@ -331,6 +337,21 @@ footer ul {
 }
 
 
+@media screen and (min-width: 600px) {
+  .footerMenu {
+    width: 50%;
+    margin: auto;
+  }
+
+  .footerMenu ul {
+    justify-content: space-evenly;
+  }
+
+  .footerMenu ul a {
+    margin: 4rem 2rem;
+  }
+}
+
 footer img {
   height: 80px;
   width: 80px;
@@ -339,6 +360,18 @@ footer img {
 
 footer p {
   text-align: center;
+}
+
+
+
+.attachment .wrapper section .attachment {
+  text-align: center;
+}
+
+.attachment .wrapper section article img {
+  width : 90%;
+  height: auto;
+  margin: auto
 }
 
 @media screen and (min-width: 600px) {
@@ -352,13 +385,23 @@ footer p {
     width: 100%;
   }
 
-  .post-template-default .wrapper section article img{
+  .post-template-default .wrapper section article img, .home .wrapper section article img {
     max-width: 30%;
     height: auto;
     margin: 1rem;
     float: left;
   }
   
+
+  .attachment .wrapper section .attachment {
+    text-align: center;
+  }
+
+  .attachment .wrapper section article img {
+    width : 60%;
+    height: auto;
+    margin: auto
+  }
 }
 
 @media screen and (min-width: 960px) {
@@ -448,8 +491,6 @@ footer p {
 
   section {
   	width: 70%;
-    display: flex;
-    flex-wrap: wrap;
   }
 
 
@@ -742,4 +783,128 @@ footer p {
     width : 40%;
     margin: 2rem auto;
   }
+}
+
+
+
+.comments .comment-main {
+  width: 100vw;
+  margin: 2rem auto 1rem 0;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 10px;
+}
+
+.comments ul.children .comment-main {
+  margin-left: 3rem;
+  margin-top: 1rem;
+  width: 80vw;
+
+}
+
+.comments .comment-main .comment-intro {
+
+  background-color: var(--main-color);
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+
+.comments .comment-main .comment-body {
+  width: 100%;
+}
+
+.comment-intro .comment-author {
+  color: var(--main-highlight);
+  text-align: center;
+  padding: 0;
+  margin: 0 auto 1rem auto;
+  width: 100%;
+}
+
+.comments ul.children {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 960px) {
+  .comments .comment-main {
+    width: 50%;
+    flex-direction: row;
+  }
+
+
+.comments ul.children .comment-main {
+  width: 50%;
+  margin-left: 4rem;
+  margin-top: 1rem;
+
+}
+
+
+  .comments .comment-main .comment-intro {
+
+    
+    width: 10vw;
+    
+  }
+
+  .comments .comment-main .comment-body {
+    width: 40vw;
+  }
+}
+
+
+
+
+
+.comment-form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+
+.comment-form input, .comment-form textarea {
+  width: 100%;
+  background-color: white;
+  border-none;
+}
+
+.comment-form input[type=submit] {
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+}
+
+.comment-form input[type=checkbox]{
+  width: auto;
+}
+
+.comment-form input:active, .comment-form textarea:active, .comment-form input:focus, .comment-form textarea:focus {
+  border-bottom: 1px solid var(--main-contrast);
+}
+
+
+
+@media screen and (min-width: 960px) {
+
+  .comment-form {
+    width: 100%;
+    
+  }
+
+  .formBlock {
+    width: 40%;
+    float: left;
+    margin: 2rem;
+  }
+
+  .commentsBlock {
+    width: 100%;
+  }
+
 }
